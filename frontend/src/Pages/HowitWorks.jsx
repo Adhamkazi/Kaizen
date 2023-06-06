@@ -14,7 +14,7 @@ import { AiTwotoneFlag } from "react-icons/ai";
 
 const HowitWorks = () => {
   return (
-    <div>
+    <div id="Howitwork">
       <Box bg={"#E3F2FD"} id="home" mt={"70px"}>
         <Box
         padding="30px"

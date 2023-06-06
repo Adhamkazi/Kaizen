@@ -13,6 +13,7 @@ import HirePage from "./HirePage";
 import { Crousal } from "./Crousal";
 import Footer from "./Footer";
 import AchievementPage from "./AchievementPage";
+import { Link as RouterLink  } from "react-router-dom";
 const Home = () => {
   return (
     <>
@@ -55,6 +56,7 @@ const Home = () => {
               legal, compliance, infrastructure, operations, and more, so you
               can fully concentrate on your core business objectives.
             </Text>
+            <RouterLink to="/genral-5" >
             <Button
               size="lg"
               mt="20px"
@@ -66,7 +68,7 @@ const Home = () => {
               rounded={"full"}
             >
               Get Started →
-            </Button>
+            </Button></RouterLink>
           </Box>
         </SimpleGrid>
       </Box>

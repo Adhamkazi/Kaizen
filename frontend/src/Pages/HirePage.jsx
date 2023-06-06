@@ -9,7 +9,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-
+import { Link } from "react-router-dom";
 const HirePage = () => {
   return (
     <div>
@@ -42,6 +42,7 @@ const HirePage = () => {
               <CheckIcon /> <Text>Payroll & Benefits</Text>
             </Flex>
           </SimpleGrid>
+          <Link to="/genral-5" >
           <Button
               size="lg"
               mt="20px"
@@ -55,6 +56,7 @@ const HirePage = () => {
             >
               Hire Now →
             </Button>
+            </Link>
         </Box>
         <Box order={{ base: 1, md: 2 }} mt={{base:"60px"}} >
           <Image src="https://static.wixstatic.com/media/1cc8b5_254f6df8d87d4950a3282fce7bc73da8~mv2.png/v1/fill/w_913,h_548,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Experience%20Design_edited.png" />
@@ -88,6 +90,7 @@ const HirePage = () => {
             </Flex>
            
           </SimpleGrid>
+          <Link to="/genral-5" >
           <Button
               size="lg"
               mt="20px"
@@ -101,6 +104,7 @@ const HirePage = () => {
             >
               Hire Now →
             </Button>
+            </Link>
         </Box>
        
       </SimpleGrid>
