@@ -7,13 +7,13 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import Feature from "./Feature";
-import HowitWorks from "./HowitWorks";
-import HirePage from "./HirePage";
-import { Crousal } from "./Crousal";
-import Footer from "./Footer";
-import AchievementPage from "./AchievementPage";
 import { Link as RouterLink  } from "react-router-dom";
+import Feature from './../Components/Feature';
+import HowitWorks from './../Components/HowitWorks';
+import HirePage from './../Components/HirePage';
+import { Crousal } from './../Components/Crousal';
+import Footer from './../Components/Footer';
+import AchievementPage from './../Components/AchievementPage';
 const Home = () => {
   return (
     <>

@@ -208,16 +208,9 @@ const Navbar = () => {
                 >
                   <Button fontWeight={700} fontFamily={"Roboto,sans-serif"}> Service</Button>
                 </ScrollLink>
-                <ScrollLink
-                  activeClass="active"
-                  to="feature"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
+                <RouterLink to="/contact"  >
                   <Button fontWeight={700} fontFamily={"Roboto,sans-serif"} >Contact</Button>
-                </ScrollLink>
+                </RouterLink>
               </>
             ) : (
               <>
@@ -233,7 +226,7 @@ const Navbar = () => {
                 <RouterLink to="/feature">
                   <Button as="div"fontWeight={700} fontFamily={"Roboto,sans-serif"}>Features</Button>
                 </RouterLink>
-                <RouterLink to="">
+                <RouterLink to="/contact">
                   <Button as="div"fontWeight={700} fontFamily={"Roboto,sans-serif"}>Conact</Button>
                 </RouterLink> 
               </>

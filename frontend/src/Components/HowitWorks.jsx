@@ -11,7 +11,7 @@ import {
 import React from "react";
 import { FcBusinessman } from "react-icons/fc";
 import { AiTwotoneFlag } from "react-icons/ai";
-
+import { Link as RouterLink } from "react-router-dom";
 const HowitWorks = () => {
   return (
     <div id="Howitwork">
@@ -136,7 +136,7 @@ const HowitWorks = () => {
               startup or a mature enterprise, we can help you build an expert
               project team of any size.
             </Text>
-            <Button  mt={"30px"}  variant={"solid"} fontSize={"22px"} py={{base:"30px",md:"30px"}}  rounded={"full"} px={"30px"} color="white" bg="#184CA8">Request Demo</Button>
+          <RouterLink to={"/contact"} >  <Button  mt={"30px"}  variant={"solid"} fontSize={"22px"} py={{base:"30px",md:"30px"}}  rounded={"full"} px={"30px"} color="white" bg="#184CA8">Request Demo</Button></RouterLink>
           </Box>
           {/* box-2 */}
           <Box bg={"#F5F5F5"} padding={{base:"50px 30px 30px 30px ",md:"70px 40px 40px 40px "}}  >
@@ -176,7 +176,7 @@ const HowitWorks = () => {
               </Text>
             </Flex>
             <Text fontSize={{base:"20px",md:"18px"}} textAlign={"left"} >Use our expertise to create a custom generation AI solution tailored to your product needs and business objectives</Text>
-            <Button color={"#184CA8"} variant={"ghost"} mt={"30px"} size={"sm"} fontSize={"20px"}   _hover={{textDecoration:"underline",color:"#184CA8"}}>Get Started</Button>
+            <RouterLink to={"/contact"} ><Button color={"#184CA8"} variant={"ghost"} mt={"30px"} size={"sm"} fontSize={"20px"}   _hover={{textDecoration:"underline",color:"#184CA8"}}>Get Started</Button></RouterLink>
           </Box>
 
 
@@ -219,7 +219,7 @@ eCommerce Mobile Team
               </Text>
             </Flex>
             <Text fontSize={{base:"20px",md:"18px"}} textAlign={"left"} >Use our expertise to create a custom generation AI solution tailored to your product needs and business objectives</Text>
-            <Button color={"#184CA8"} variant={"ghost"} mt={"30px"} size={"sm"}  fontSize={"20px"}   _hover={{textDecoration:"underline",color:"#184CA8"}}>Get Started</Button>
+            <RouterLink to={"/contact"}>  <Button color={"#184CA8"} variant={"ghost"} mt={"30px"} size={"sm"}  fontSize={"20px"}   _hover={{textDecoration:"underline",color:"#184CA8"}}>Get Started</Button></RouterLink>
           </Box>
         </SimpleGrid>
       </Box>

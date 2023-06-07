@@ -75,7 +75,7 @@ const HirePage = () => {
             In order to understand the your customer deeply any organization must know how to empathize with people. Having a great sense of understanding when it comes to human sentiments has been proven to be highly beneficial for an organic business growth.
             </Text>
           </Box>
-          <SimpleGrid columns={{base:1,md:1}} fontSize={{base:"17px",md:"17px"}} mt={"40px"} fontWeight={350}   justifyContent={"space-around"} rowGap={{base:"10px",md:"15px"}} >
+          <SimpleGrid columns={{base:1,md:1}} fontSize={{base:"15px",md:"17px"}} mt={"40px"} fontWeight={350}   justifyContent={"space-around"} rowGap={{base:"10px",md:"15px"}} >
             <Flex alignItems={"center"} gap={"10px"} >
               <CheckIcon /> <Text>Build & Onboard your team in stages</Text>
             </Flex>

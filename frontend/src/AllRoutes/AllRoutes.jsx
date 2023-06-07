@@ -2,8 +2,9 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import GetStartedForm from '../Pages/GetStartedForm';
 import Home from './../Pages/Home';
-import HowitWorks from '../Pages/HowitWorks';
-import Feature from '../Pages/Feature';
+import HowitWorks from './../Components/HowitWorks';
+import Feature from './../Components/Feature';
+import ContactPage from '../Pages/ContactPage';
 
 const AllRoutes = () => {
   return (
@@ -13,6 +14,7 @@ const AllRoutes = () => {
             <Route path="/" element={<Home/>} />
             <Route path="/works" element={<HowitWorks/>} />
             <Route path="/feature" element={<Feature/>} />
+            <Route path="/contact" element={<ContactPage/>} />
         </Routes>
       
     </div>
