@@ -13,19 +13,19 @@ import { Link } from "react-router-dom";
 const HirePage = () => {
   return (
     <div>
-      <SimpleGrid columns={{ base: 1, md: 2 }} w={"80%"} margin={"auto"} spacing={3} alignItems={"center"} justifyItems={"center"} order={{ base: -1, md: 2 }} >
-        <Box order={{ base: 2, md: 1 }}  padding={"40px"}display="flex" flexDirection="column"  >
+      <SimpleGrid columns={{ base: 1, md: 2 }} w={"90%"} margin={"auto"} spacing={3} alignItems={"center"} justifyItems={"center"} order={{ base: -1, md: 2 }} >
+        <Box order={{ base: 2, md: 1 }}  padding={{base:"0px",md:"40px"}}display="flex" flexDirection="column"  >
           <Box>
             <Heading textAlign={"left"} fontSize={{base:"35px",md:"40px"}} fontWeight={"semibold"} color={"#184CA8"} >Hiring Global team</Heading>
             <Text mt={{base:"10px",md:"20px"}} textAlign={"left"} fontSize={{base:"20px",md:"20px"}} >
               Streamline your global team-building process effortlessly with
-              Humancloud. Say goodbye to the complexities of establishing legal
+              Kaizen. Say goodbye to the complexities of establishing legal
               entities, managing hiring, payroll, legal matters, compliance,
               infrastructure, operations, and more. With our comprehensive
               solution, we take care of it all and listed below.
             </Text>
           </Box>
-          <SimpleGrid columns={{base:1,md:2}} fontSize={{base:"20px",md:"17px"}} mt={"40px"} fontWeight={350}   justifyContent={"space-around"} rowGap={{base:"10px",md:"25px"}} >
+          <SimpleGrid columns={{base:1,md:2}} fontSize={{base:"18px",md:"17px"}} mt={"40px"} fontWeight={350}   justifyContent={"space-around"} rowGap={{base:"10px",md:"25px"}} >
             <Flex alignItems={"center"} gap={"10px"} >
               <CheckIcon /> <Text>Employee engagement</Text>
             </Flex>
@@ -64,18 +64,18 @@ const HirePage = () => {
       </SimpleGrid>
 
 
-      <SimpleGrid columns={{ base: 1, md: 2 }} w={"80%"} margin="auto" spacing={3} alignItems={"center"} justifyItems={"center"} order={{ base: -1, md: 2 }} >
+      <SimpleGrid columns={{ base: 1, md: 2 }} w={"90%"} margin="auto" spacing={3} alignItems={"center"} justifyItems={"center"} order={{ base: -1, md: 2 }} >
       <Box order={{ base: 1, md: 1 }} mt={{base:"60px"}} >
           <Image src="https://static.wixstatic.com/media/4b0223_fdb8e82894444bc894c78a038e8cc630~mv2.png/v1/fill/w_893,h_548,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/New-07_edited.png" />
         </Box>
-        <Box order={{ base: 1, md: 2 }}  padding={"40px"}display="flex" flexDirection="column"  >
+        <Box order={{ base: 1, md: 2 }}  padding={{base:"0px",md:"40px"}}display="flex" flexDirection="column"  >
           <Box>
             <Heading textAlign={"left"} fontSize={{base:"35px",md:"40px"}} fontWeight={"semibold"} color={"#184CA8"} >Ecosystem that prioritizes Human-First approach</Heading>
             <Text mt={{base:"10px",md:"30px"}} textAlign={"left"} fontSize={{base:"20px",md:"20px"}} >
             In order to understand the your customer deeply any organization must know how to empathize with people. Having a great sense of understanding when it comes to human sentiments has been proven to be highly beneficial for an organic business growth.
             </Text>
           </Box>
-          <SimpleGrid columns={{base:1,md:1}} fontSize={{base:"15px",md:"17px"}} mt={"40px"} fontWeight={350}   justifyContent={"space-around"} rowGap={{base:"10px",md:"15px"}} >
+          <SimpleGrid columns={{base:1,md:1}} fontSize={{base:"13px",md:"17px"}} mt={"40px"} fontWeight={350}   justifyContent={"space-around"} rowGap={{base:"10px",md:"15px"}} >
             <Flex alignItems={"center"} gap={"10px"} >
               <CheckIcon /> <Text>Build & Onboard your team in stages</Text>
             </Flex>

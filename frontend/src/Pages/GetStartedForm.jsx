@@ -11,9 +11,18 @@ import {
 import React, { useEffect, useState } from "react";
 import { FormControl, FormLabel } from "@chakra-ui/react";
 import Footer from './../Components/Footer';
-
+import { useToast } from '@chakra-ui/react'
 const GetStartedForm = () => {
-  const [countryCode, setCountryCode] = useState([]);
+  const [countryCodes, setCountryCodes] = useState([]);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [contactNumber, setContactNumber] = useState("");
+  const [companyName, setcompanyName] = useState("");
+  const [message, setMessage] = useState("");
+  const [service ,setService] = useState("");
+  const [countryCode,setcountryCode] = useState("")
+  const toast = useToast()
 
   useEffect(() => {
     const fetchCountryCodes = async () => {
@@ -24,7 +33,7 @@ const GetStartedForm = () => {
           code: country.alpha3Code,
           phoneCode: `+${country.callingCodes[0]}`,
         }));
-        setCountryCode(fetchedCountryCodes);
+        setCountryCodes(fetchedCountryCodes);
       } catch (error) {
         console.error("Error fetching country codes:", error);
       }
@@ -32,6 +41,47 @@ const GetStartedForm = () => {
 
     fetchCountryCodes();
   });
+
+  const handelCheck = async() => {
+    let obj = {
+      firstName,
+      lastName,
+      email,
+      countryCode,
+      contactNumber ,
+      companyName,
+      service,
+      message,
+    }
+try {
+  
+  const res = await fetch('https://rose-tough-greyhound.cyclic.app/genral/genral-5',{
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(obj)
+  })
+  let data = await res.json()
+  console.log(data)
+  toast({
+    description: "Thanks for submitting.",
+    status: 'success',
+    duration: 9000,
+    isClosable: true,
+  })
+} catch (error) {
+  console.log(error)
+  toast({
+    description: "Something went wrong.",
+    status: 'error',
+    duration: 9000,
+    isClosable: true,
+  })
+}
+
+  };
+
   return (
     <div>
       <Box w={"80%"} mt={{ base: "200px", md: "30px" }} margin={"auto"} paddingBottom={"30px"}>
@@ -81,6 +131,8 @@ const GetStartedForm = () => {
                     fontFamily: "Roboto, sans-serif",
                     padding: "10px",
                   }}
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
                 />
               </FormControl>
               <FormControl>
@@ -98,6 +150,8 @@ const GetStartedForm = () => {
                     fontFamily: "Roboto, sans-serif",
                     padding: "10px",
                   }}
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
                 />
               </FormControl>
             </Flex>
@@ -123,6 +177,8 @@ const GetStartedForm = () => {
                     fontFamily: "Roboto, sans-serif",
                     padding: "10px",
                   }}
+                  value={email}
+                    onChange={(e) =>setEmail(e.target.value)}
                 />
               </FormControl>
               <FormControl>
@@ -140,6 +196,8 @@ const GetStartedForm = () => {
                     fontFamily: "Roboto, sans-serif",
                     padding: "10px",
                   }}
+                  value={companyName}
+                  onChange={(e) => setcompanyName(e.target.value)}
                 />
               </FormControl>
             </Flex>
@@ -162,13 +220,16 @@ const GetStartedForm = () => {
                   <Select
                     w={"50%"}
                     variant="flushed"
+                    type="number"
                     color={"black"}
                     borderBottom={"4px"}
                     cursor={"pointer"}
                     borderBottomColor={"white"}
                     _focus={{ borderBottomColor: "red" }}
+                    value={countryCode}
+                    onChange={(e) => setcountryCode(e.target.value)}
                   >
-                    {countryCode.map((country) => (
+                    {countryCodes.map((country) => (
                       <option key={country.code} value={country.phoneCode}>
                         {`${country.code} (${country.phoneCode})`}
                       </option>
@@ -180,16 +241,18 @@ const GetStartedForm = () => {
                     Phone*
                   </FormLabel>
                   <Input
-                    type="text"
+                    type="number"
                     variant="flushed"
                     borderBottom={"4px"}
-                    _focus={{ borderBottomColor: "red" }}
+                    _focus={{ borderBottomColor: "red" }} 
                     placeholder="e.g., 555-555-5555"
                     _placeholder={{
                       color: "white",
                       fontFamily: "Roboto, sans-serif",
                       padding: "10px",
                     }}
+                    value={contactNumber}
+                    onChange={(e) => setContactNumber(e.target.value)}
                   />
                 </FormControl>
               </Flex>
@@ -205,6 +268,8 @@ const GetStartedForm = () => {
                   color={"black"}
                   cursor={"pointer"}
                   _focus={{ borderBottomColor: "red" }}
+value={service}
+                  onChange={(e) => setService(e.target.value)}
                 >
                   <option value="Hire">Hire team</option>
                   <option value="Onboard">Onboard Team</option>
@@ -224,6 +289,8 @@ const GetStartedForm = () => {
                   fontFamily: "Roboto, sans-serif",
                   padding: "10px",
                 }}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
               />
             </FormControl>
           </Box>
@@ -239,6 +306,7 @@ const GetStartedForm = () => {
             fontFamily= "Roboto, sans-serif"
             color="#0D47A1"
             _hover={{bg:"#DCE775"}}
+            onClick={handelCheck} 
           >
             Get Started
           </Button>

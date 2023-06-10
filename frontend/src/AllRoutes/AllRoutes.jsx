@@ -5,6 +5,9 @@ import Home from './../Pages/Home';
 import HowitWorks from './../Components/HowitWorks';
 import Feature from './../Components/Feature';
 import ContactPage from '../Pages/ContactPage';
+import AdminHome from './../Admin-Section/AdminHome';
+import ContactsData from '../Admin-Section/ContactsData';
+import GenralFormData from '../Admin-Section/GenralFormData';
 
 const AllRoutes = () => {
   return (
@@ -15,6 +18,10 @@ const AllRoutes = () => {
             <Route path="/works" element={<HowitWorks/>} />
             <Route path="/feature" element={<Feature/>} />
             <Route path="/contact" element={<ContactPage/>} />
+            <Route path="/admin" element={<AdminHome/>} />
+            <Route path='/contact-data' element={<ContactsData/>} />
+            <Route path='/genralForm-data' element={<GenralFormData/>} />
+            
         </Routes>
       
     </div>

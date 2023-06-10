@@ -83,7 +83,7 @@ export default function Footer() {
               <Text fontWeight={"bold"} fontSize={"20px"}>
                 Sales :
               </Text>
-              <Text fontSize={"20px"}>sales@humancloud.ltd</Text>
+              <Text fontSize={"20px"}>sales@Kaizen.ltd</Text>
               <Text fontSize={"20px"}>India:+91 85301 16304</Text>
               <Text fontSize={"20px"}>US:+1 650 887 7006</Text>
             </Stack>
@@ -91,14 +91,14 @@ export default function Footer() {
               <Text fontWeight={"bold"} fontSize={"20px"}>
                 Customer Care:
               </Text>
-              <Text fontSize={"18px"}>info@humancloud.ltd</Text>
+              <Text fontSize={"18px"}>info@Kaizen.ltd</Text>
             </Stack>
             <Stack align={"flex-start"} mt={"30px"}>
               <Text fontWeight={"bold"} fontSize={"20px"}>
                 Careers :
               </Text>
               <Text fontSize={"18px"}>India: +91 77759 08988</Text>
-              <Text fontSize={"18px"}>talent@humancloud.ltd</Text>
+              <Text fontSize={"18px"}>talent@Kaizen.ltd</Text>
             </Stack>
           </Box>
           <Box>
@@ -130,7 +130,7 @@ export default function Footer() {
           justify={{ md: "space-between" }}
           align={{ md: "center" }}
         >
-          <Text>© Copyright 2023 – All Right Reserved by Humancloud, Inc.</Text>
+          <Text>© Copyright 2023 – All Right Reserved by Kaizen, Inc.</Text>
         </Container>
       </Box>
     </Box>

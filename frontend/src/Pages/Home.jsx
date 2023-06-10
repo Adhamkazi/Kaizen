@@ -14,6 +14,7 @@ import HirePage from './../Components/HirePage';
 import { Crousal } from './../Components/Crousal';
 import Footer from './../Components/Footer';
 import AchievementPage from './../Components/AchievementPage';
+import Blogs from "../Components/Blogs";
 const Home = () => {
   return (
     <>
@@ -77,6 +78,7 @@ const Home = () => {
       <HirePage/>
       <Crousal/>
       <AchievementPage/>
+      <Blogs/>
       <Footer/>
     </>
   );
