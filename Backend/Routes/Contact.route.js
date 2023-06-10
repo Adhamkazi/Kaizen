@@ -8,7 +8,6 @@ const contactRouter= express.Router();
 
 contactRouter.get('/',async(req,res)=>{
    let query = req.query;
-   console.log("query");
    try{
 const user  = await contactModal.find(query);
 res.send(user);
@@ -28,6 +27,16 @@ contactRouter.post("/contact-5",async(req,res)=>{
     }
 })
 
+
+contactRouter.delete("/delete/:id", async (req, res) => {
+   const id = req.params.id
+   try {
+       await contactModal.findByIdAndDelete({ "_id": id })
+       res.send(`Deleted the food whose id is ${id}`);
+   } catch (err) {
+       console.log(err);
+   }
+})
 
 
 module.exports = {contactRouter}

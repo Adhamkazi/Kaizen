@@ -8,7 +8,6 @@ const genralFormRouter= express.Router();
 
 genralFormRouter.get('/',async(req,res)=>{
    let query = req.query;
-   console.log("query");
    try{
 const user  = await genralFormModal.find(query);
 res.send(user);
@@ -29,6 +28,17 @@ genralFormRouter.post("/genral-5",async(req,res)=>{
     }
 })
 
+
+genralFormRouter.delete("/delete/:id", async (req, res) => {
+    const id = req.params.id
+    try {
+        await genralFormModal.findByIdAndDelete({ "_id": id })
+        res.send(`Deleted the food whose id is ${id}`);
+    } catch (err) {
+        console.log(err);
+    }
+ })
+ 
 
 
 module.exports = {genralFormRouter}
