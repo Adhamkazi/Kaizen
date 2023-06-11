@@ -10,19 +10,19 @@ import {
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { FormControl, FormLabel } from "@chakra-ui/react";
-import Footer from './../Components/Footer';
-import { useToast } from '@chakra-ui/react'
+import Footer from "./../Components/Footer";
+import { useToast } from "@chakra-ui/react";
 const GetStartedForm = () => {
-  const [countryCodes, setCountryCodes] = useState([]);
+  const [codes, setCodes] = useState([]);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [contactNumber, setContactNumber] = useState("");
   const [companyName, setcompanyName] = useState("");
   const [message, setMessage] = useState("");
-  const [service ,setService] = useState("");
-  const [countryCode,setcountryCode] = useState("")
-  const toast = useToast()
+  const [service, setService] = useState("");
+  const [countryCode, setcountryCode] = useState("+91");
+  const toast = useToast();
 
   useEffect(() => {
     const fetchCountryCodes = async () => {
@@ -33,7 +33,7 @@ const GetStartedForm = () => {
           code: country.alpha3Code,
           phoneCode: `+${country.callingCodes[0]}`,
         }));
-        setCountryCodes(fetchedCountryCodes);
+        setCodes(fetchedCountryCodes);
       } catch (error) {
         console.error("Error fetching country codes:", error);
       }
@@ -42,49 +42,86 @@ const GetStartedForm = () => {
     fetchCountryCodes();
   });
 
-  const handelCheck = async() => {
+  const handelCheck = async () => {
     let obj = {
       firstName,
       lastName,
       email,
       countryCode,
-      contactNumber ,
+      contactNumber,
       companyName,
       service,
       message,
-    }
-try {
-  
-  const res = await fetch('https://rose-tough-greyhound.cyclic.app/genral/genral-5',{
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(obj)
-  })
-  let data = await res.json()
-  console.log(data)
-  toast({
-    description: "Thanks for submitting.",
-    status: 'success',
-    duration: 9000,
-    isClosable: true,
-  })
-} catch (error) {
-  console.log(error)
-  toast({
-    description: "Something went wrong.",
-    status: 'error',
-    duration: 9000,
-    isClosable: true,
-  })
-}
+    };
 
+    const requiredFields = [
+      "firstName",
+      "lastName",
+      "email",
+      "countryCode",
+      "contactNumber",
+      "companyName",
+      "service",
+    ];
+    const emptyFields = requiredFields.filter((field) => !obj[field]);
+    if (emptyFields.length > 0) {
+      toast({
+        description: `Please fill in the following fields: ${emptyFields.join(
+          ", "
+        )}`,
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+      });
+      return; 
+    }
+
+    try {
+      const res = await fetch(
+        "https://difficult-gold-vulture.cyclic.app/genral/genral-5",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(obj),
+        }
+      );
+      let data = await res.json();
+      console.log(data);
+      toast({
+        description: "Thanks for submitting.",
+        status: "success",
+        duration: 9000,
+        isClosable: true,
+      });
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setcountryCode("");
+      setContactNumber("");
+      setcompanyName("");
+      setService("");
+      setMessage("");
+    } catch (error) {
+      console.log(error);
+      toast({
+        description: "Something went wrong.",
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+      });
+    }
   };
 
   return (
     <div>
-      <Box w={"80%"} mt={{ base: "200px", md: "30px" }} margin={"auto"} paddingBottom={"30px"}>
+      <Box
+        w={"80%"}
+        mt={{ base: "200px", md: "30px" }}
+        margin={"auto"}
+        paddingBottom={"30px"}
+      >
         <Heading
           textAlign={"left"}
           fontSize={{ base: "30px", md: "60px" }}
@@ -178,7 +215,7 @@ try {
                     padding: "10px",
                   }}
                   value={email}
-                    onChange={(e) =>setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </FormControl>
               <FormControl>
@@ -221,16 +258,17 @@ try {
                     w={"50%"}
                     variant="flushed"
                     type="number"
-                    color={"black"}
+                    color={"white"}
                     borderBottom={"4px"}
                     cursor={"pointer"}
                     borderBottomColor={"white"}
+                    
                     _focus={{ borderBottomColor: "red" }}
                     value={countryCode}
                     onChange={(e) => setcountryCode(e.target.value)}
                   >
-                    {countryCodes.map((country) => (
-                      <option key={country.code} value={country.phoneCode}>
+                    {codes.map((country) => (
+                      <option key={country.code} value={country.phoneCode} style={{backgroundColor:"#0D47A1"}}>
                         {`${country.code} (${country.phoneCode})`}
                       </option>
                     ))}
@@ -244,7 +282,7 @@ try {
                     type="number"
                     variant="flushed"
                     borderBottom={"4px"}
-                    _focus={{ borderBottomColor: "red" }} 
+                    _focus={{ borderBottomColor: "red" }}
                     placeholder="e.g., 555-555-5555"
                     _placeholder={{
                       color: "white",
@@ -265,14 +303,14 @@ try {
                   variant={"flushed"}
                   borderBottom={"4px"}
                   borderBottomColor={"white"}
-                  color={"black"}
+                  color={"white"}
                   cursor={"pointer"}
                   _focus={{ borderBottomColor: "red" }}
-value={service}
+                  value={service}
                   onChange={(e) => setService(e.target.value)}
                 >
-                  <option value="Hire">Hire team</option>
-                  <option value="Onboard">Onboard Team</option>
+                  <option value="Hire" style={{backgroundColor:"#0D47A1"}} > Hire team</option>
+                  <option value="Onboard"style={{backgroundColor:"#0D47A1"}} >Onboard Team</option>
                 </Select>
               </FormControl>
             </Flex>
@@ -295,24 +333,28 @@ value={service}
             </FormControl>
           </Box>
           <Button
-          alignSelf={"left"}
-          mt="30px"
-          fontSize={"20px"} fontWeight={"light"}
+            alignSelf={"left"}
+            mt="30px"
+            fontSize={"20px"}
+            fontWeight={"light"}
             size="xl"
-            height={{base:"40px",md:"60px"}}
-            width={{base:"200px",md:"350px"}}
-            boxShadow='lg' p='6' rounded='md' bg='white'
+            height={{ base: "40px", md: "60px" }}
+            width={{ base: "200px", md: "350px" }}
+            boxShadow="lg"
+            p="6"
+            rounded="md"
+            bg="white"
             borderRadius={"0px"}
-            fontFamily= "Roboto, sans-serif"
+            fontFamily="Roboto, sans-serif"
             color="#0D47A1"
-            _hover={{bg:"#DCE775"}}
-            onClick={handelCheck} 
+            _hover={{ bg: "#DCE775" }}
+            onClick={handelCheck}
           >
             Get Started
           </Button>
         </Box>
       </Box>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

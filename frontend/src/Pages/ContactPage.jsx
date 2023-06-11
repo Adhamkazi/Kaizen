@@ -7,7 +7,7 @@ import {
   Text,
   Textarea,
 } from "@chakra-ui/react";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 import React, { useState } from "react";
 import { FormControl, FormLabel } from "@chakra-ui/react";
 import Footer from "../Components/Footer";
@@ -15,7 +15,7 @@ import { useToast } from '@chakra-ui/react'
 
 
 const ContactPage = () => {
-  const [verified, setVerified] = useState(false);
+  // const [verified, setVerified] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -24,17 +24,17 @@ const ContactPage = () => {
   const [message, setMessage] = useState("");
   const toast = useToast()
 
-  const handleRecaptchaChange = (response) => {
-    if (response) {
-      setVerified(true);
-    } else {
-      setVerified(false);
-    }
+  // const handleRecaptchaChange = (response) => {
+  //   if (response) {
+  //     setVerified(true);
+  //   } else {
+  //     setVerified(false);
+  //   }
 
 
-  };
+  // };
 
-  const handelCheck = async() => {
+  const handelCheck = async () => {
     let obj = {
       firstName,
       lastName,
@@ -42,34 +42,56 @@ const ContactPage = () => {
       phone,
       company,
       message,
-    }
-try {
+    };
   
-  const res = await fetch('https://rose-tough-greyhound.cyclic.app/contact//contact-5',{
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(obj)
-  })
-  let data = await res.json()
-  console.log(data)
-  toast({
-    description: "Thanks for submitting.",
-    status: 'success',
-    duration: 9000,
-    isClosable: true,
-  })
-} catch (error) {
-  console.log(error)
-  toast({
-    description: "Something went wrong.",
-    status: 'error',
-    duration: 9000,
-    isClosable: true,
-  })
-}
-
+    // Check if any of the required fields are empty
+    const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'company', 'message'];
+    const emptyFields = requiredFields.filter(field => !obj[field]);
+  
+    if (emptyFields.length > 0) {
+      // Display error toast for empty fields
+      toast({
+        description: `Please fill in the following fields: ${emptyFields.join(
+          ", "
+        )}`,
+        status: 'error',
+        duration: 9000,
+        isClosable: true,
+      });
+      return; // Stop execution if any required fields are empty
+    }
+  
+    try {
+      const res = await fetch('https://difficult-gold-vulture.cyclic.app/contact/contact-5', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(obj)
+      });
+      let data = await res.json();
+      console.log(data);
+      toast({
+        description: "Thanks for submitting.",
+        status: 'success',
+        duration: 9000,
+        isClosable: true,
+      });
+      setFirstName("");
+      setLastName("");
+       setEmail("");
+       setPhone("");
+       setCompany("");
+       setMessage("");  
+    } catch (error) {
+      console.log(error);
+      toast({
+        description: "Something went wrong.",
+        status: 'error',
+        duration: 9000,
+        isClosable: true,
+      });
+    }
   };
 
   return (
@@ -213,12 +235,12 @@ try {
               onChange={(e) => setMessage(e.target.value)}
             />
           </FormControl>
-          <FormControl mt="40px">
-            <ReCAPTCHA
+          {/* <FormControl mt="40px"> */}
+            {/* <ReCAPTCHA
               sitekey="6LfO1XkmAAAAAM0SHaFcU30RObD-1Z1vsWXPT-zq"
               onChange={handleRecaptchaChange}
-            />
-          </FormControl>
+            /> */}
+          {/* </FormControl> */}
           <Button
             _hover={{ bg: "black" }}
             mt="30px"
@@ -229,7 +251,7 @@ try {
             color="white"
             px="50px"
             onClick={handelCheck}
-            disabled={!verified}
+            // disabled={!verified}
           >
             Submit
           </Button>

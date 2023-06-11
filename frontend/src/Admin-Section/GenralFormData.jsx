@@ -11,7 +11,7 @@ const GenralFormData = () => {
 
   const getData = async () => {
     try {
-      const res = await fetch("https://rose-tough-greyhound.cyclic.app/genral");
+      const res = await fetch("https://difficult-gold-vulture.cyclic.app/genral");
       const data = await res.json();
       setusers(data);
     } catch (error) {

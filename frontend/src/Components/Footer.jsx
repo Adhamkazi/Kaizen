@@ -4,24 +4,24 @@ import {
   Stack,
   SimpleGrid,
   Text,
-  Link,
   useColorModeValue,
   Button,
   Image,
 } from "@chakra-ui/react";
 import { FaTwitter, FaYoutube, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 export default function Footer() {
   return (
     <Box
-      bg={useColorModeValue("#05002D")}
+      bg={useColorModeValue("#05002D")}  fontFamily={"Plus Jakarta Sans"}
       color={useColorModeValue("white", "white")}
       mt={"40px"}
     >
       <Box   w={"80%"} py={10} margin={"auto"}>
         <Image
-          w={{base:"50%",md:"20%"}}
-          src="https://static.wixstatic.com/media/2b6261_f16dbbf214f244a792c4687eeb9d05b2~mv2.png/v1/fill/w_264,h_42,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/white-logo.png"
+          w={{ base: "50%", md: "10%" }} color={"gray"}
+          src="https://josephdonbiz.com/wp-content/uploads/2022/09/Kaizen-Logo.png"
         />
         <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} spacing={8}>
           <Box>
@@ -106,8 +106,17 @@ export default function Footer() {
               <Text fontWeight={"bold"} fontSize={"20px"}>
                 Quick Links
               </Text>
-              <Link href={"#"} fontSize={"20px"} >About Us</Link>
-              <Link href={"#"} fontSize={"20px"}>Contact Us</Link>
+              <ScrollLink
+                  activeClass="active"
+                  to="home"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  fontSize={"20px"}
+                
+                >  About Us</ScrollLink>
+              <Link to="/contact" fontSize={"20px"}>Contact Us</Link>
               <Link href={"#"} fontSize={"20px"}>Blog</Link>
               <Link href={"#"}fontSize={"20px"}>Careers</Link>
               <Link href={"#"} fontSize={"20px"}>Privacy Policy</Link>

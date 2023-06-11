@@ -11,7 +11,7 @@ import React from "react";
 const Feature = () => {
   return (
     <div>
-      <Box w={"80%"} m={"auto"} id="feature" mt={"40px"}>
+      <Box w={"80%"} m={"auto"} id="feature" mt={"40px"}  fontFamily={"Plus Jakarta Sans"}>
         <Heading fontSize={{base:"29px",md:"40px"}} color={"#1E344B"} lineHeight={{base:"35px",md:"40px"}} textAlign={{base:"left",md:"center"}}>
           Struggling to assemble a top-notch team?
         </Heading>

@@ -15,7 +15,7 @@ import { Link as RouterLink } from "react-router-dom";
 const HowitWorks = () => {
   return (
     <div id="Howitwork">
-      <Box bg={"#E3F2FD"} id="home" mt={"70px"}>
+      <Box bg={"#E3F2FD"} id="home" mt={"70px"}  fontFamily={"Plus Jakarta Sans"}>
         <Box
         padding="30px"
           textAlign={"left"}

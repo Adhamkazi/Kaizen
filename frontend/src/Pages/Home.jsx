@@ -18,8 +18,9 @@ import Blogs from "../Components/Blogs";
 const Home = () => {
   return (
     <>
-      <Box id="home" w={"100%"} mt={"30px"} mx="auto">
+      <Box id="home" w={"90%"} mt={"30px"} mx="auto">
         <SimpleGrid
+         fontFamily={"Plus Jakarta Sans"}
           columns={{ base: 1, sm: 1, md: 2 }}
           gap="50px"
           alignItems={{ base: "center" }}

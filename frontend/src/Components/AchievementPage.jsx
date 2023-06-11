@@ -12,7 +12,7 @@ const AchievementPage = () => {
   return (
     <div>
       <Box
-        bg={useColorModeValue("#0D47A1")}
+        bg={useColorModeValue("#0D47A1")} fontFamily={"Plus Jakarta Sans"}
         color={useColorModeValue("gray.200", "gray.200")}
       >
         <Box w={"80%"} margin="auto" mt="50px">
@@ -27,7 +27,7 @@ const AchievementPage = () => {
               What we've been able to achieve
             </Heading>
             <Text
-              fontSize={{ base: "25px", md: "30px" }}
+              fontSize={{ base: "23px", md: "28px" }}
               mt={{ base: "30px" }}
               textAlign={"left"}
             >

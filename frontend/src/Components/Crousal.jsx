@@ -34,7 +34,7 @@ export const Crousal = () => {
   );
 
   return (
-    <div style={{marginTop:"100px",width:"70%",margin:"auto"}}>
+    <div style={{marginTop:"110px",width:"70%",margin:"auto"}}>
       <Carousel
         additionalTransfrom={0}
         arrows

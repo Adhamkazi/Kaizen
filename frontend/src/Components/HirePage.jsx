@@ -12,8 +12,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 const HirePage = () => {
   return (
-    <div>
-      <SimpleGrid columns={{ base: 1, md: 2 }} w={"90%"} margin={"auto"} spacing={3} alignItems={"center"} justifyItems={"center"} order={{ base: -1, md: 2 }} >
+    <div  >
+      <SimpleGrid columns={{ base: 1, md: 2 }} w={"90%"} margin={"auto"} spacing={3} alignItems={"center"} justifyItems={"center"} order={{ base: -1, md: 2 }}  fontFamily={"Plus Jakarta Sans"}>
         <Box order={{ base: 2, md: 1 }}  padding={{base:"0px",md:"40px"}}display="flex" flexDirection="column"  >
           <Box>
             <Heading textAlign={"left"} fontSize={{base:"35px",md:"40px"}} fontWeight={"semibold"} color={"#184CA8"} >Hiring Global team</Heading>
@@ -64,7 +64,7 @@ const HirePage = () => {
       </SimpleGrid>
 
 
-      <SimpleGrid columns={{ base: 1, md: 2 }} w={"90%"} margin="auto" spacing={3} alignItems={"center"} justifyItems={"center"} order={{ base: -1, md: 2 }} >
+      <SimpleGrid  fontFamily={"Plus Jakarta Sans"} columns={{ base: 1, md: 2 }} w={"90%"} margin="auto" spacing={3} alignItems={"center"} justifyItems={"center"} order={{ base: -1, md: 2 }} >
       <Box order={{ base: 1, md: 1 }} mt={{base:"60px"}} >
           <Image src="https://static.wixstatic.com/media/4b0223_fdb8e82894444bc894c78a038e8cc630~mv2.png/v1/fill/w_893,h_548,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/New-07_edited.png" />
         </Box>

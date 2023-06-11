@@ -11,7 +11,7 @@ const ContactsData = () => {
 
   const getData = async () => {
     try {
-      const res = await fetch("https://rose-tough-greyhound.cyclic.app/contact");
+      const res = await fetch("https://difficult-gold-vulture.cyclic.app/contact");
       const data = await res.json();
       setusers(data);
     } catch (error) {

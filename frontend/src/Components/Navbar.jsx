@@ -22,6 +22,7 @@ const Navbar = () => {
 
   return (
     <Box
+    fontFamily={"Plus Jakarta Sans"}
       boxShadow="sm"
       bg={{ base: useColorModeValue("gray.100", "gray.900"), md: "white" }}
       padding={{ base: "5px", md: "10px" }}
@@ -113,7 +114,7 @@ const Navbar = () => {
                     Home
                   </Button>
                 </RouterLink>
-                <RouterLink to="/works">
+                <RouterLink to="/">
                 <Button
                     bg="white"
                     _hover={{ color: "#2196F3", bg: "white" }}
@@ -124,7 +125,7 @@ const Navbar = () => {
                     How it works
                   </Button>
                 </RouterLink>
-                <RouterLink to="/feature" >
+                <RouterLink to="/" >
                 <Button
                     bg="white"
                     _hover={{ color: "#2196F3", bg: "white" }}
