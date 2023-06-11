@@ -27,6 +27,7 @@ contactSchema.pre('save', function (next) {
     }
     next();
   });
+  
 const contactModal = mongoose.model("contact",contactSchema);
 
 
