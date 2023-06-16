@@ -45,7 +45,7 @@ const GenralFormData = () => {
   };
   return (
     <div>
-       <Box p={4} w={"100%"} >
+       <Box p={4} bg="gray.700" >
       <Heading as="h2" size="lg" mb={4}>
         Form Data
       </Heading>

@@ -61,7 +61,7 @@ const ContactsData = () => {
   };
   return (
     <div>
-      <Box p={4}>
+      <Box p={4} bg="gray.700"  >
         <Heading as="h2" size="lg" mb={4}>
           Contact Data
         </Heading>
