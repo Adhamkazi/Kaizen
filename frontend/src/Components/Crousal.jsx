@@ -7,12 +7,12 @@ import { MdOutlineKeyboardArrowRight,MdKeyboardArrowLeft } from 'react-icons/md'
 export const Crousal = () => {
   const CustomRightArrow = ({ onClick }) => ( 
     <IconButton
-    icon={<MdOutlineKeyboardArrowRight size={{base:"40px",md:"80px"}} />}
+    icon={<MdOutlineKeyboardArrowRight size={{base:"40px",md:"130px"}} />}
     onClick={onClick}
     aria-label="right-arrow"
     variant="ghost"
     position="absolute"
-    right={useBreakpointValue({ base: '10px' })}
+    right={useBreakpointValue({ base: '-10px' })}
     top="50%"
     _hover={{bg:"transparent"}}
     transform="translate(0%, -50%)"
@@ -34,7 +34,7 @@ export const Crousal = () => {
   );
 
   return (
-    <div style={{marginTop:"110px",width:"70%",margin:"auto"}}>
+    <div style={{marginTop:"10px",width:"70%",margin:"auto"}}>
       <Carousel
         additionalTransfrom={0}
         arrows  

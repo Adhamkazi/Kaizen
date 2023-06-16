@@ -42,7 +42,7 @@ export default function Footer() {
 
             <Stack align={"flex-start"} mt={"30px"}>
               <Text fontWeight={"bold"} fontSize={"20px"}>
-                Development Center
+                Office 
               </Text>
               <Text fontWeight={"bold"} fontSize={"18px"}>
                 Pune
@@ -80,7 +80,7 @@ export default function Footer() {
             </Stack>
           </Box>
 
-          <Box  padding={10}  textAlign={"center"} >
+          <Box  padding={{base:0,md:10}}   >
             <Stack align={"flex-start"} mt={"30px"}>
               <Text fontWeight={"bold"} fontSize={"23px"}>
                 Contact Us
