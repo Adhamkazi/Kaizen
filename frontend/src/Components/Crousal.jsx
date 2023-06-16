@@ -37,8 +37,7 @@ export const Crousal = () => {
     <div style={{marginTop:"110px",width:"70%",margin:"auto"}}>
       <Carousel
         additionalTransfrom={0}
-        arrows
-        
+        arrows  
         autoPlaySpeed={3000}
         centerMode={false}
         className=""

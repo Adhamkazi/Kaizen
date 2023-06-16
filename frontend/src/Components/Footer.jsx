@@ -18,12 +18,15 @@ export default function Footer() {
       color={useColorModeValue("white", "white")}
       mt={"40px"}
     >
-      <Box   w={"80%"} py={10} margin={"auto"}>
+      <Box  w={"80%"}  py={10} margin={"auto"}>
         <Image
-          w={{ base: "50%", md: "10%" }} color={"gray"}
+          w={{ base: "50%", md: "20%" }} color={"gray"}
           src="https://josephdonbiz.com/wp-content/uploads/2022/09/Kaizen-Logo.png"
         />
-        <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} spacing={8}>
+        <SimpleGrid
+    columns={{ base: 1, sm: 2, md: 3 }}
+    alignItems="center"
+    spacing={10}>
           <Box>
             <Stack align={"flex-start"} mt={"30px"}>
               <Text fontWeight={"bold"} fontSize={"23px"}>
@@ -39,18 +42,20 @@ export default function Footer() {
 
             <Stack align={"flex-start"} mt={"30px"}>
               <Text fontWeight={"bold"} fontSize={"20px"}>
-                Development Centers
+                Development Center
               </Text>
               <Text fontWeight={"bold"} fontSize={"18px"}>
                 Pune
               </Text>
-              <Text textAlign={"left"} fontSize={"18px"}>
-                Level 2, Prime Business Bay, Baner, Pune 411045, Maharashtra,
+              <Text textAlign={"left"} fontSize={"18px"} >
+                Konark Indrayu Premises Cooprative Society LTD. 
+                BH 2S2 F--l.Plaza , Kondhawa  Khurd 
+                 Pune 411048, Maharashtra,
                 India
               </Text>
             </Stack>
 
-            <Stack align={"flex-start"} mt={"30px"}>
+            {/* <Stack align={"flex-start"} mt={"30px"}>
               <Text fontWeight={"bold"} fontSize={"20px"}>
                 Hyderabad
               </Text>
@@ -58,7 +63,7 @@ export default function Footer() {
                 T-Hub 2.0, 20, Inorbit Mall Rd, Madhapur 500081, Telangana,
                 India
               </Text>
-            </Stack>
+            </Stack> */}
             <Stack direction={"row"} spacing={6 } mt="30px">
               <Button label={"Twitter"} href={"#"} bg={"#05002D"}  >
                 <FaTwitter   fontSize={"30px"} color="gray" />
@@ -75,34 +80,34 @@ export default function Footer() {
             </Stack>
           </Box>
 
-          <Box>
+          <Box  padding={10}  textAlign={"center"} >
             <Stack align={"flex-start"} mt={"30px"}>
               <Text fontWeight={"bold"} fontSize={"23px"}>
                 Contact Us
               </Text>
               <Text fontWeight={"bold"} fontSize={"20px"}>
-                Sales :
+                office :
               </Text>
               <Text fontSize={"20px"}>sales@Kaizen.ltd</Text>
-              <Text fontSize={"20px"}>India:+91 85301 16304</Text>
+              <Text fontSize={"20px"}>India:+91 9545401057</Text>
               <Text fontSize={"20px"}>US:+1 650 887 7006</Text>
             </Stack>
-            <Stack align={"flex-start"} mt={"30px"}>
+            {/* <Stack align={"flex-start"} mt={"30px"}>
               <Text fontWeight={"bold"} fontSize={"20px"}>
                 Customer Care:
               </Text>
               <Text fontSize={"18px"}>info@Kaizen.ltd</Text>
-            </Stack>
-            <Stack align={"flex-start"} mt={"30px"}>
+            </Stack> */}
+            {/* <Stack align={"flex-start"} mt={"30px"}>
               <Text fontWeight={"bold"} fontSize={"20px"}>
                 Careers :
               </Text>
               <Text fontSize={"18px"}>India: +91 77759 08988</Text>
               <Text fontSize={"18px"}>talent@Kaizen.ltd</Text>
-            </Stack>
+            </Stack> */}
           </Box>
           <Box>
-            <Stack align={"flex-start"} mt="30px">
+            <Stack align={"flex-start"} mt="30px" cursor={"pointer"} >
               <Text fontWeight={"bold"} fontSize={"20px"}>
                 Quick Links
               </Text>
@@ -113,8 +118,7 @@ export default function Footer() {
                   smooth={true}
                   offset={-70}
                   duration={500}
-                  fontSize={"20px"}
-                
+                  fontSize={"20px"}  
                 >  About Us</ScrollLink>
               <Link to="/contact" fontSize={"20px"}>Contact Us</Link>
               <Link href={"#"} fontSize={"20px"}>Blog</Link>

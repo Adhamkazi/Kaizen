@@ -38,6 +38,7 @@ const Navbar = () => {
           alignItems="center"
           justifyContent="space-evenly"
         >
+          
           <Image
             w={{ base: "50%", md: "10%" }}
             src="https://josephdonbiz.com/wp-content/uploads/2022/09/Kaizen-Logo.png"

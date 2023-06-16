@@ -82,7 +82,7 @@ const AchievementPage = () => {
 
           <SimpleGrid columns={{ base: 1, md: 2 }} paddingTop={"70px"}>
             <Box padding="20px">
-              <Text fontSize={{ base: "25px", md: "30px" }} textAlign={"left"}>
+              <Text fontSize={{ base: "23px", md: "27px" }} textAlign={"left"}>
                 "Kaizen team augmented Contractwrangler with an incredible
                 engineering resourcing support that included UI/UX, Platform
                 Engineering and Dev Ops. Reliability, innovation and timely
@@ -104,7 +104,7 @@ const AchievementPage = () => {
             </Box>
 
             <Box padding="20px">
-              <Text fontSize={{ base: "20px", md: "30px" }} textAlign={"left"}>
+              <Text fontSize={{ base: "20px", md: "27px" }} textAlign={"left"}>
                 “Kaizen Engineering team helped with building scale out
                 Kubernetes solutions using Avesha's smart scalar technology.
                 Thrilled to work with a development partner that has great
