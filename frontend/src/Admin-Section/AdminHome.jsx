@@ -218,8 +218,9 @@ function AdminHome() {
       </Drawer>
       {/* mobilenav */}
       <MobileNav display={{ base: "flex", md: "none" }} onOpen={onOpen} />
+      {isLoggedIn ? (
       <Box ml={{ base: 0, md: 60 }} p="4">
-        {isLoggedIn ? (
+        
           <Box minH="100vh">
             <Flex
               align="center"
@@ -281,10 +282,10 @@ function AdminHome() {
               {renderFormData && <GeneralFormData />}
             </SimpleGrid>
           </Box>
-        ) : (
-          <Login setIsLoggedIn={setIsLoggedIn} />
-        )}
       </Box>
+      ) : (
+        <Login setIsLoggedIn={setIsLoggedIn} />
+      )}
     </Box>
   );
 }

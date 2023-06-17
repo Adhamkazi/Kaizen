@@ -23,9 +23,9 @@ const AchievementPage = () => {
     <div>
       <Box
         bg={useColorModeValue("#0D47A1")} fontFamily={"Plus Jakarta Sans"}
-        color={useColorModeValue("gray.200", "gray.200")} data-aos="fade-up" data-aos-duration="1000"
+        color={useColorModeValue("gray.200", "gray.200")} data-aos="fade-up" 
       >
-        <Box w={"80%"} margin="auto" mt="50px" data-aos="fade-up" data-aos-duration="1000">
+        <Box w={"80%"} margin="auto" mt="50px" data-aos="fade-up" >
           <SimpleGrid columns={{ base: 1, md: 2 }} paddingTop={"70px"}>
             <Heading
               fontWeight={"semibold"}
@@ -52,7 +52,7 @@ const AchievementPage = () => {
             justifyContent={"space-between"}
             rowGap={"30px"}
             textAlign={"left"}
-            data-aos="fade-up" data-aos-duration="1000"
+            data-aos="fade-up" 
           >
             <Box>
               <Text fontSize={{ base: "70px", md: "70px" }} fontWeight={"bold"}>
@@ -91,7 +91,7 @@ const AchievementPage = () => {
             </Box>
           </SimpleGrid>
 
-          <SimpleGrid columns={{ base: 1, md: 2 }} paddingTop={"70px"} data-aos="fade-up" data-aos-duration="1000">
+          <SimpleGrid columns={{ base: 1, md: 2 }} paddingTop={"70px"} data-aos="fade-up" >
             <Box padding="20px">
               <Text fontSize={{ base: "23px", md: "27px" }} textAlign={"left"}>
                 "Kaizen team augmented Contractwrangler with an incredible
@@ -137,7 +137,7 @@ const AchievementPage = () => {
           </SimpleGrid>
         </Box>
       </Box>
-      <Box bg="#EDEDFB" paddingBottom={"50px"}  borderBottom={{md:"2px solid blue"}} borderTop={"2px solid blue"} data-aos="fade-up" data-aos-duration="1000" >
+      <Box bg="#EDEDFB" paddingBottom={"50px"}  borderBottom={{md:"2px solid blue"}} borderTop={"2px solid blue"} data-aos="fade-up"  >
         <Box w={"80%"} margin={"auto"} paddingTop="50px"  >
           <Heading fontSize={{base:"28px",md:"50px"}} textAlign={"left"} fontWeight={"semibold"} color='#0D47A1'  fontFamily={"Plus Jakarta Sans"}>
             Used by startups and enterprises to build great teams across the
@@ -150,7 +150,7 @@ const AchievementPage = () => {
               highly skilled builders team and helped them save time, money and
               resources
             </Text>
-            <SimpleGrid columns={{ base: 2, md: 4 }} spacing={10} rowGap={"30px"} data-aos="fade-up" data-aos-duration="1000" >
+            <SimpleGrid columns={{ base: 2, md: 4 }} spacing={10} rowGap={"30px"} data-aos="fade-up"  >
               <Image src='https://static.wixstatic.com/media/fd3242_2738c50249c64ad4b1749485114b32af~mv2.png/v1/crop/x_44,y_40,w_386,h_118/fill/w_90,h_29,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Conga_HeaderLogo.png'/> 
               <Image src='https://static.wixstatic.com/media/4b0223_efe966daa5dc433897a73bc947f22377~mv2.png/v1/fill/w_123,h_29,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/ByteLearn_edited.png' />
               <Image src='https://static.wixstatic.com/media/4b0223_ebf31ee67fc349ea8ba763b84d2b5a86~mv2.png/v1/crop/x_0,y_16,w_1036,h_214/fill/w_138,h_29,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/findem_edited.png'/> 

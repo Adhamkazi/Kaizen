@@ -28,9 +28,9 @@ export default function Footer() {
       bg={useColorModeValue("#05002D")}  fontFamily={"Plus Jakarta Sans"}
       color={useColorModeValue("white", "white")}
       mt={"40px"}
-      data-aos="fade-up" data-aos-duration="500"
+      data-aos="fade-up" 
     >
-      <Box  data-aos="fade-up" data-aos-duration="1000" w={"80%"}  py={10} margin={"auto"}>
+      <Box  data-aos="fade-up"  w={"80%"}  py={10} margin={"auto"}>
         <Image
           w={{ base: "50%", md: "20%" }} color={"gray"}
           src="https://josephdonbiz.com/wp-content/uploads/2022/09/Kaizen-Logo.png"
@@ -48,7 +48,7 @@ export default function Footer() {
                 California
               </Text>
               <Text textAlign={"left"} fontSize={"18px"}>
-                800 West El Camino Real, Suite 180, Mountain View, CA - 94040
+Vallejo Pl, San Ramon, CA 94583, USA
               </Text>
             </Stack>
 
@@ -60,10 +60,8 @@ export default function Footer() {
                 Pune
               </Text>
               <Text textAlign={"left"} fontSize={"18px"} >
-                Konark Indrayu Premises Cooprative Society LTD. 
-                BH 2S2 F--l.Plaza , Kondhawa  Khurd 
-                 Pune 411048, Maharashtra,
-                India
+              2S2F, Konark Indrayu Premises, l. Plaza, Kondhawa, Pune 411048, Maharashtra, India,
+              
               </Text>
             </Stack>
 
@@ -100,9 +98,9 @@ export default function Footer() {
               <Text fontWeight={"bold"} fontSize={"20px"}>
                 office :
               </Text>
-              <Text fontSize={"20px"}>sales@Kaizen.ltd</Text>
+              <Text fontSize={"20px"}>info@Kaizentech.co.in</Text>
               <Text fontSize={"20px"}>India:+91 9545401057</Text>
-              <Text fontSize={"20px"}>US:+1 650 887 7006</Text>
+              <Text fontSize={"20px"}>US:+1 614 888 xxxx</Text>
             </Stack>
             {/* <Stack align={"flex-start"} mt={"30px"}>
               <Text fontWeight={"bold"} fontSize={"20px"}>

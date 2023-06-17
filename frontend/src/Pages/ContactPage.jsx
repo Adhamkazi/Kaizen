@@ -8,14 +8,22 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 // import ReCAPTCHA from "react-google-recaptcha";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FormControl, FormLabel } from "@chakra-ui/react";
 import Footer from "../Components/Footer";
 import { useToast } from '@chakra-ui/react'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ContactPage = () => {
-  // const [verified, setVerified] = useState(false);
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh(); 
+
+    return () => {
+      AOS.refresh();
+    };
+  }, []);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -24,15 +32,6 @@ const ContactPage = () => {
   const [message, setMessage] = useState("");
   const toast = useToast()
 
-  // const handleRecaptchaChange = (response) => {
-  //   if (response) {
-  //     setVerified(true);
-  //   } else {
-  //     setVerified(false);
-  //   }
-
-
-  // };
 
   const handelCheck = async () => {
     let obj = {
@@ -96,27 +95,28 @@ const ContactPage = () => {
 
   return (
     <div>
-      <Box bg="#0D47A1" mt={{ base: "100px", md: "10px" }}>
+      <Box bg="#0D47A1" mt={{ base: "100px", md: "10px" }} data-aos="fade-up">
         <Text
           fontSize={{ base: "30px", md: "50px" }}
           padding="30px"
-          w={{ base: "90%", md: "40%" }}
+          w={{ base: "90%", md: "90%" }}
           textAlign={"center"}
           color="white"
         >
           Grow Your Business With Our Expertise
         </Text>
       </Box>
-      <SimpleGrid columns={{ base: 1, md: 2 }} w={"80%"} margin={"auto"}>
+      <SimpleGrid columns={{ base: 1, md: 2 }} w={"80%"} margin={"auto"}  data-aos="fade-up">
         <Box mt="100px">
           <Text fontSize={"60px"} color={"#0D47A1"} fontWeight={600}>
             Contact Us
           </Text>
         </Box>
         <Box>
-          <Flex direction={{ base: "column", md: "row" }} gap="30px" mt="40px">
-            <FormControl>
+          <Flex direction={{ base: "column", md: "row" }} gap="30px" mt="40px" >
+            <FormControl data-aos="fade-up">
               <FormLabel
+
                 fontSize={{ base: "20px", md: "15px" }}
                 fontWeight={400}
               >
@@ -136,7 +136,7 @@ const ContactPage = () => {
                 onChange={(e) => setFirstName(e.target.value)}
               />
             </FormControl>
-            <FormControl>
+            <FormControl data-aos="fade-up">
               <FormLabel
                 fontSize={{ base: "20px", md: "15px" }}
                 fontWeight={400}
@@ -158,7 +158,7 @@ const ContactPage = () => {
               />
             </FormControl>
           </Flex>
-          <FormControl mt="40px">
+          <FormControl mt="40px " data-aos="fade-up">
             <FormLabel fontSize={{ base: "20px", md: "15px" }} fontWeight={400}>
               Email*
             </FormLabel>
@@ -176,7 +176,7 @@ const ContactPage = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </FormControl>
-          <FormControl mt="40px">
+          <FormControl mt="40px" data-aos="fade-up">
             <FormLabel fontSize={{ base: "20px", md: "15px" }} fontWeight={400}>
               Phone*
             </FormLabel>
@@ -194,7 +194,7 @@ const ContactPage = () => {
               onChange={(e) => setPhone(e.target.value)}
             />
           </FormControl>
-          <FormControl mt="40px">
+          <FormControl mt="40px" data-aos="fade-up">
             <FormLabel fontSize={{ base: "20px", md: "15px" }} fontWeight={400}>
               Company*
             </FormLabel>
@@ -213,7 +213,7 @@ const ContactPage = () => {
             />
           </FormControl>
 
-          <FormControl mt="40px">
+          <FormControl mt="40px" data-aos="fade-up">
             <FormLabel fontSize={{ base: "20px", md: "15px" }} fontWeight={400}>
               Write a message?*
             </FormLabel>
@@ -235,12 +235,7 @@ const ContactPage = () => {
               onChange={(e) => setMessage(e.target.value)}
             />
           </FormControl>
-          {/* <FormControl mt="40px"> */}
-            {/* <ReCAPTCHA
-              sitekey="6LfO1XkmAAAAAM0SHaFcU30RObD-1Z1vsWXPT-zq"
-              onChange={handleRecaptchaChange}
-            /> */}
-          {/* </FormControl> */}
+        
           <Button
             _hover={{ bg: "black" }}
             mt="30px"
@@ -251,7 +246,6 @@ const ContactPage = () => {
             color="white"
             px="50px"
             onClick={handelCheck}
-            // disabled={!verified}
           >
             Submit
           </Button>

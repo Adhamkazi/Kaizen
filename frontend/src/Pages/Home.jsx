@@ -62,6 +62,7 @@ const Home = () => {
               lineHeight={{ base: "30px", md: "33px" }}
               textAlign={"left"}
               fontWeight={350}
+              data-aos="fade-up"
             >
               Kaizen's AI-powered platform offers a hassle-free solution for
               building and managing global teams by handling hiring, payroll,

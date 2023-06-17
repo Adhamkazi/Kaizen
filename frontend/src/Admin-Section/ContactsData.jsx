@@ -66,6 +66,7 @@ const ContactsData = () => {
           Contact Data
         </Heading>
         <SimpleGrid
+        
           columns={{ base: 1, md: 2 }}
           py={6}
           rowGap={"30px"}

@@ -12,7 +12,16 @@ import React, { useEffect, useState } from "react";
 import { FormControl, FormLabel } from "@chakra-ui/react";
 import Footer from "./../Components/Footer";
 import { useToast } from "@chakra-ui/react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const GetStartedForm = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh(); 
+    return () => {
+      AOS.refresh();
+    };
+  }, []);
   const [codes, setCodes] = useState([]);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -121,6 +130,7 @@ const GetStartedForm = () => {
         mt={{ base: "200px", md: "30px" }}
         margin={"auto"}
         paddingBottom={"30px"}
+        data-aos="fade-up"
       >
         <Heading
           textAlign={"left"}
@@ -139,6 +149,7 @@ const GetStartedForm = () => {
           paddingRight={{ md: "130px" }}
           mt="20px"
           fontFamily={"Roboto, sans-serif"}
+          data-aos="fade-up"
         >
           Congratulations you are a step away from building a global dream team.
           Our on-demand team will help you with your journey to build a global
@@ -153,7 +164,7 @@ const GetStartedForm = () => {
               gap="30px"
               padding="30px"
             >
-              <FormControl>
+              <FormControl data-aos="fade-up">
                 <FormLabel fontSize={"12px"} fontWeight={"light"}>
                   First Name*
                 </FormLabel>
@@ -172,7 +183,7 @@ const GetStartedForm = () => {
                   onChange={(e) => setFirstName(e.target.value)}
                 />
               </FormControl>
-              <FormControl>
+              <FormControl data-aos="fade-up">
                 <FormLabel fontSize={"12px"} fontWeight={"light"}>
                   Last Name*
                 </FormLabel>
@@ -198,8 +209,9 @@ const GetStartedForm = () => {
               gap="30px"
               w="100%"
               padding="30px"
+              data-aos="fade-up"
             >
-              <FormControl>
+              <FormControl data-aos="fade-up">
                 <FormLabel fontSize={"12px"} fontWeight={"light"}>
                   Email*
                 </FormLabel>
@@ -218,7 +230,7 @@ const GetStartedForm = () => {
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </FormControl>
-              <FormControl>
+              <FormControl data-aos="fade-up">
                 <FormLabel fontSize={"12px"} fontWeight={"light"}>
                   Company Name*
                 </FormLabel>
@@ -250,7 +262,7 @@ const GetStartedForm = () => {
                 gap="30px"
                 w="100%"
               >
-                <FormControl>
+                <FormControl data-aos="fade-up">
                   <FormLabel fontSize={"12px"} fontWeight={"light"}>
                     Code*
                   </FormLabel>
@@ -274,7 +286,7 @@ const GetStartedForm = () => {
                     ))}
                   </Select>
                 </FormControl>
-                <FormControl>
+                <FormControl data-aos="fade-up">
                   <FormLabel fontSize={"12px"} fontWeight={"light"}>
                     Phone*
                   </FormLabel>
@@ -314,7 +326,7 @@ const GetStartedForm = () => {
                 </Select>
               </FormControl>
             </Flex>
-            <FormControl>
+            <FormControl data-aos="fade-up">
               <FormLabel fontSize={"12px"} fontWeight={"light"}>
                 How can we help?*
               </FormLabel>

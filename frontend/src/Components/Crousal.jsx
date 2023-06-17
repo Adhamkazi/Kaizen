@@ -44,7 +44,7 @@ export const Crousal = () => {
   );
 
   return (
-    <div style={{marginTop:"10px",width:"70%",margin:"auto"}}  data-aos="fade-up" data-aos-duration="1000">
+    <div style={{marginTop:"10px",width:"70%",margin:"auto"}}  data-aos="fade-up" >
       <Carousel
         additionalTransfrom={0}
         arrows  

@@ -13,15 +13,15 @@ import 'aos/dist/aos.css';
 const Feature = () => {
   useEffect(() => {
     AOS.init();
-    AOS.refresh(); // Call AOS.refresh() after the component has mounted
+    AOS.refresh(); 
 
     return () => {
-      AOS.refresh(); // Call AOS.refresh() when the component unmounts
+      AOS.refresh();
     };
   }, []);
   return (
     <div>
-      <Box  data-aos="fade-up" data-aos-duration="1000" w={"80%"} m={"auto"} id="feature" mt={"40px"}  fontFamily={"Plus Jakarta Sans"}>
+      <Box  data-aos="fade-up"  w={"80%"} m={"auto"} id="feature" mt={"40px"}  fontFamily={"Plus Jakarta Sans"}>
         <Heading fontSize={{base:"29px",md:"40px"}} color={"#1E344B"} lineHeight={{base:"35px",md:"40px"}} textAlign={{base:"left",md:"center"}}>
           Struggling to assemble a top-notch team?
         </Heading>
