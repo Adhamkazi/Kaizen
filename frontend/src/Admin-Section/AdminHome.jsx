@@ -219,8 +219,7 @@ function AdminHome() {
       {/* mobilenav */}
       <MobileNav display={{ base: "flex", md: "none" }} onOpen={onOpen} />
       {isLoggedIn ? (
-      <Box ml={{ base: 0, md: 60 }} p="4">
-        
+      <Box ml={{ base: 0, md: 60 }} p="4">   
           <Box minH="100vh">
             <Flex
               align="center"

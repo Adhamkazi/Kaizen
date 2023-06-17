@@ -219,13 +219,13 @@ const Navbar = () => {
                 <RouterLink to="/">
                   <Button as="div" fontWeight={700} fontFamily={"Roboto,sans-serif"}>Home</Button>
                 </RouterLink>
-                <RouterLink to="/works">
+                <RouterLink to="/">
                   <Button as="div" fontWeight={700} fontFamily={"Roboto,sans-serif"}>How it works</Button>
                 </RouterLink>
-                <RouterLink to="">
+                <RouterLink to="/">
                   <Button as="div"fontWeight={700} fontFamily={"Roboto,sans-serif"}>Service</Button>
                 </RouterLink>
-                <RouterLink to="/feature">
+                <RouterLink to="/">
                   <Button as="div"fontWeight={700} fontFamily={"Roboto,sans-serif"}>Features</Button>
                 </RouterLink>
                 <RouterLink to="/contact">
