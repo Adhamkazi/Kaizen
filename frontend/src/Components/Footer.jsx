@@ -11,14 +11,26 @@ import {
 import { FaTwitter, FaYoutube, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 export default function Footer() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh(); 
+
+    return () => {
+      AOS.refresh();
+    };
+  }, []);
   return (
     <Box
       bg={useColorModeValue("#05002D")}  fontFamily={"Plus Jakarta Sans"}
       color={useColorModeValue("white", "white")}
       mt={"40px"}
+      data-aos="fade-up" data-aos-duration="500"
     >
-      <Box  w={"80%"}  py={10} margin={"auto"}>
+      <Box  data-aos="fade-up" data-aos-duration="1000" w={"80%"}  py={10} margin={"auto"}>
         <Image
           w={{ base: "50%", md: "20%" }} color={"gray"}
           src="https://josephdonbiz.com/wp-content/uploads/2022/09/Kaizen-Logo.png"
@@ -26,7 +38,7 @@ export default function Footer() {
         <SimpleGrid
     columns={{ base: 1, sm: 2, md: 3 }}
     alignItems="center"
-    spacing={10}>
+    spacing={10} data-aos="fade-up" data-aos-duration="1000">
           <Box>
             <Stack align={"flex-start"} mt={"30px"}>
               <Text fontWeight={"bold"} fontSize={"23px"}>

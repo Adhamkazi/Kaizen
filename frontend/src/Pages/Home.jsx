@@ -6,7 +6,7 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { Link as RouterLink  } from "react-router-dom";
 import Feature from './../Components/Feature';
 import HowitWorks from './../Components/HowitWorks';
@@ -15,10 +15,20 @@ import { Crousal } from './../Components/Crousal';
 import Footer from './../Components/Footer';
 import AchievementPage from './../Components/AchievementPage';
 import Blogs from "../Components/Blogs";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Home = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh(); // Call AOS.refresh() after the component has mounted
+
+    return () => {
+      AOS.refresh(); // Call AOS.refresh() when the component unmounts
+    };
+  }, []);
   return (
     <>
-      <Box id="home" w={"90%"} mt={"30px"} mx="auto">
+      <Box  data-aos="fade-up"  id="home" w={"90%"} mt={"30px"} mx="auto" >
         <SimpleGrid
          fontFamily={"Plus Jakarta Sans"}
           columns={{ base: 1, sm: 1, md: 2 }}
@@ -35,7 +45,7 @@ const Home = () => {
               src="https://static.wixstatic.com/media/2b6261_d0eb60d2074849c182c5d343c0bf123c~mv2.jpg/v1/fill/w_560,h_560,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/main-banner-img.jpg"
             />
           </Box>
-          <Box textAlign={"center"} paddingRight={"30px"}>
+          <Box textAlign={"center"} paddingRight={"30px"} data-aos="fade-up">
             <Heading
               textAlign="left"
               color={"#0D47A1"}

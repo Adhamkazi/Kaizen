@@ -8,14 +8,23 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const HirePage = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh(); 
+    return () => {
+      AOS.refresh();
+    };
+  }, []);
   return (
     <div  >
-      <SimpleGrid columns={{ base: 1, md: 2 }} w={"90%"} margin={"auto"} spacing={3} alignItems={"center"} justifyItems={"center"} order={{ base: -1, md: 2 }}  fontFamily={"Plus Jakarta Sans"}>
+      <SimpleGrid data-aos="fade-up" data-aos-duration="1000" columns={{ base: 1, md: 2 }} w={"90%"} margin={"auto"} spacing={3} alignItems={"center"} justifyItems={"center"} order={{ base: -1, md: 2 }}  fontFamily={"Plus Jakarta Sans"}>
         <Box order={{ base: 2, md: 1 }}  padding={{base:"0px",md:"40px"}}display="flex" flexDirection="column"  >
-          <Box>
+          <Box data-aos="fade-up" data-aos-duration="1000" >
             <Heading textAlign={"left"} fontSize={{base:"35px",md:"40px"}} fontWeight={"semibold"} color={"#184CA8"} >Hiring Global team</Heading>
             <Text mt={{base:"10px",md:"20px"}} textAlign={"left"} fontSize={{base:"20px",md:"20px"}} >
               Streamline your global team-building process effortlessly with
@@ -58,14 +67,14 @@ const HirePage = () => {
             </Button>
             </Link>
         </Box>
-        <Box order={{ base: 1, md: 2 }} mt={{base:"60px"}} >
+        <Box order={{ base: 1, md: 2 }} mt={{base:"60px"}} data-aos="fade-up" data-aos-duration="1000">
           <Image src="https://static.wixstatic.com/media/1cc8b5_254f6df8d87d4950a3282fce7bc73da8~mv2.png/v1/fill/w_913,h_548,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Experience%20Design_edited.png" />
         </Box>
       </SimpleGrid>
 
 
-      <SimpleGrid  fontFamily={"Plus Jakarta Sans"} columns={{ base: 1, md: 2 }} w={"90%"} margin="auto" spacing={3} alignItems={"center"} justifyItems={"center"} order={{ base: -1, md: 2 }} >
-      <Box order={{ base: 1, md: 1 }} mt={{base:"60px"}} >
+      <SimpleGrid data-aos="fade-up" data-aos-duration="1000" fontFamily={"Plus Jakarta Sans"} columns={{ base: 1, md: 2 }} w={"90%"} margin="auto" spacing={3} alignItems={"center"} justifyItems={"center"} order={{ base: -1, md: 2 }} >
+      <Box order={{ base: 1, md: 1 }} mt={{base:"60px"}} data-aos="fade-up" data-aos-duration="1000" >
           <Image src="https://static.wixstatic.com/media/4b0223_fdb8e82894444bc894c78a038e8cc630~mv2.png/v1/fill/w_893,h_548,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/New-07_edited.png" />
         </Box>
         <Box order={{ base: 1, md: 2 }}  padding={{base:"0px",md:"40px"}}display="flex" flexDirection="column"  >
@@ -75,7 +84,7 @@ const HirePage = () => {
             In order to understand the your customer deeply any organization must know how to empathize with people. Having a great sense of understanding when it comes to human sentiments has been proven to be highly beneficial for an organic business growth.
             </Text>
           </Box>
-          <SimpleGrid columns={{base:1,md:1}} fontSize={{base:"13px",md:"17px"}} mt={"40px"} fontWeight={350}   justifyContent={"space-around"} rowGap={{base:"10px",md:"15px"}} >
+          <SimpleGrid data-aos="fade-up" data-aos-duration="1000" columns={{base:1,md:1}} fontSize={{base:"13px",md:"17px"}} mt={"40px"} fontWeight={350}   justifyContent={"space-around"} rowGap={{base:"10px",md:"15px"}} >
             <Flex alignItems={"center"} gap={"10px"} >
               <CheckIcon /> <Text>Build & Onboard your team in stages</Text>
             </Flex>

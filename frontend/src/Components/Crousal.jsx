@@ -3,8 +3,18 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { MdOutlineKeyboardArrowRight,MdKeyboardArrowLeft } from 'react-icons/md';
 //new check
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 export const Crousal = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh(); 
+
+    return () => {
+      AOS.refresh();
+    };
+  }, []);
   const CustomRightArrow = ({ onClick }) => ( 
     <IconButton
     icon={<MdOutlineKeyboardArrowRight size={{base:"40px",md:"130px"}} />}
@@ -34,7 +44,7 @@ export const Crousal = () => {
   );
 
   return (
-    <div style={{marginTop:"10px",width:"70%",margin:"auto"}}>
+    <div style={{marginTop:"10px",width:"70%",margin:"auto"}}  data-aos="fade-up" data-aos-duration="1000">
       <Carousel
         additionalTransfrom={0}
         arrows  
