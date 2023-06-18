@@ -14,6 +14,7 @@ import Footer from "../Components/Footer";
 import { useToast } from '@chakra-ui/react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { ArrowUpIcon } from '@chakra-ui/icons'
 
 const ContactPage = () => {
   useEffect(() => {
@@ -24,6 +25,12 @@ const ContactPage = () => {
       AOS.refresh();
     };
   }, []);
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -252,6 +259,23 @@ const ContactPage = () => {
         </Box>
       </SimpleGrid>
       <Footer />
+      <Button
+      className="back-to-top d-flex align-items-center justify-content-center"  position="fixed"
+      right="15px"
+      bottom="15px"
+      zIndex="996"
+      width="40px"
+      height="40px"
+      borderRadius="50px"
+      transition="all 0.4s"
+      bg="#47b2e4"
+      color="#fff"
+      _hover={{ bg: "#6bc1e9", color: "#fff" }}
+      _active={{ visibility: "visible", opacity: 1 }}
+      onClick={handleScrollToTop}
+    >
+      <ArrowUpIcon />
+    </Button>
     </div>
   );
 };

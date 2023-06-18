@@ -37,7 +37,7 @@ const Navbar = () => {
           spacing={8}
           alignItems="center"
           justifyContent="space-evenly"
-          border={'1px solid black'}
+       
         >
           {/* <RouterLink to="/"> */}
           <Image

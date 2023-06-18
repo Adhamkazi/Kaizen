@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Heading,
   ListItem,
   Text,
@@ -11,6 +12,7 @@ import Footer from "../Components/Footer";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
+import { ArrowUpIcon } from '@chakra-ui/icons'
 const PrivcyPolices = () => {
   useEffect(() => {
     AOS.init();
@@ -20,6 +22,12 @@ const PrivcyPolices = () => {
       AOS.refresh(); // Call AOS.refresh() when the component unmounts
     };
   }, []);
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
   return (
     <div>
       <Box data-aos="fade-up" w={{ base: "80%", md: "80%" }} margin={"auto"} color={"black"} fontWeight={500}>
@@ -347,6 +355,23 @@ const PrivcyPolices = () => {
         </VStack>
       </Box>
       <Footer/>
+      <Button
+      className="back-to-top d-flex align-items-center justify-content-center"  position="fixed"
+      right="15px"
+      bottom="15px"
+      zIndex="996"
+      width="40px"
+      height="40px"
+      borderRadius="50px"
+      transition="all 0.4s"
+      bg="#47b2e4"
+      color="#fff"
+      _hover={{ bg: "#6bc1e9", color: "#fff" }}
+      _active={{ visibility: "visible", opacity: 1 }}
+      onClick={handleScrollToTop}
+    >
+      <ArrowUpIcon />
+    </Button>
     </div>
   );
 };

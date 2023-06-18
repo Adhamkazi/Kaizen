@@ -17,6 +17,8 @@ import AchievementPage from './../Components/AchievementPage';
 import Blogs from "../Components/Blogs";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { ArrowUpIcon } from '@chakra-ui/icons'
+
 const Home = () => {
   useEffect(() => {
     AOS.init();
@@ -26,6 +28,12 @@ const Home = () => {
       AOS.refresh(); // Call AOS.refresh() when the component unmounts
     };
   }, []);
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
   return (
     <>
       <Box  data-aos="fade-up"  id="home" w={"90%"} mt={"30px"} mx="auto" >
@@ -91,7 +99,25 @@ const Home = () => {
       <Crousal/>
       <AchievementPage/>
       <Blogs/>
+
       <Footer/>
+      <Button
+      className="back-to-top d-flex align-items-center justify-content-center"  position="fixed"
+      right="15px"
+      bottom="15px"
+      zIndex="996"
+      width="40px"
+      height="40px"
+      borderRadius="50px"
+      transition="all 0.4s"
+      bg="#47b2e4"
+      color="#fff"
+      _hover={{ bg: "#6bc1e9", color: "#fff" }}
+      _active={{ visibility: "visible", opacity: 1 }}
+      onClick={handleScrollToTop}
+    >
+      <ArrowUpIcon />
+    </Button>
     </>
   );
 };
