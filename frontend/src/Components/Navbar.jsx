@@ -37,12 +37,14 @@ const Navbar = () => {
           spacing={8}
           alignItems="center"
           justifyContent="space-evenly"
+          border={'1px solid black'}
         >
-          
+          {/* <RouterLink to="/"> */}
           <Image
-            w={{ base: "50%", md: "10%" }}
+            w={{ base: "50%", md: "10%" }} 
             src="https://josephdonbiz.com/wp-content/uploads/2022/09/Kaizen-Logo.png"
           />
+          {/* </RouterLink> */}
           <HStack as="nav" spacing={4} display={{ base: "none", md: "flex" }}>
             {isHome ? (
               <>

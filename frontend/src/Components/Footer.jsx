@@ -131,9 +131,9 @@ Vallejo Pl, San Ramon, CA 94583, USA
                   fontSize={"20px"}  
                 >  About Us</ScrollLink>
               <Link to="/contact" fontSize={"20px"}>Contact Us</Link>
-              <Link href={"#"} fontSize={"20px"}>Blog</Link>
-              <Link href={"#"}fontSize={"20px"}>Careers</Link>
-              <Link href={"#"} fontSize={"20px"}>Privacy Policy</Link>
+              <Link to={"/"} fontSize={"20px"}>Blog</Link>
+              <Link to={"/"}fontSize={"20px"}>Careers</Link>
+              <Link to={"/privacy-policy"} fontSize={"20px"}>Privacy Policy</Link>
             </Stack>
           </Box>
         </SimpleGrid>
@@ -152,6 +152,7 @@ Vallejo Pl, San Ramon, CA 94583, USA
           spacing={4}
           justify={{ md: "space-between" }}
           align={{ md: "center" }}
+          
         >
           <Text>© Copyright 2023 – All Right Reserved by Kaizen, Inc.</Text>
         </Container>

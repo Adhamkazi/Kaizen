@@ -8,6 +8,7 @@ import ContactsData from '../Admin-Section/ContactsData';
 import GenralFormData from '../Admin-Section/GenralFormData';
 import Login from '../Admin-Section/Login';
 import AdminHome from '../Admin-Section/AdminHome';
+import PrivcyPolices from '../Pages/PrivcyPolices';
 // import AdminHome from './../Admin-Section/AdminHome';..
 
 
@@ -36,8 +37,10 @@ const AllRoutes = () => {
           
         />
         <Route path="/login" element={<Login />} />
+        <Route path="/privacy-policy" element={<PrivcyPolices />} />
       </Routes>
             
+     
       
     </div>
   );
