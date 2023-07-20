@@ -11,7 +11,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-
+import logo from "../../Gifs/KaizenTech-2.png"
 export default function Footer() {
   return (
     <Box
@@ -105,13 +105,11 @@ export default function Footer() {
             direction={{ base: "column", md: "row" }}
             alignItems={{ base: "center", md: "flex-start" }}
           >
-            <Image
-              w={{ base: "50%", md: "90%" }}
-              h={{ base: "100%", md: "30%" }}
-            //   bg="white"
-            //   filter={"invert(100%"}
-              src="https://josephdonbiz.com/wp-content/uploads/2022/09/Kaizen-Logo.png"
-            />
+  <Image
+    src={logo}
+    w={{ base: "70%", md: "100%" }}
+    style={{ filter: "brightness(0) saturate(100%) invert(32%) sepia(100%) saturate(1989%) hue-rotate(185deg) brightness(95%) contrast(105%)" }}
+  />
             {/* <Image
               w={{ base: "20%", md: "20%" }}
               h={{ base: "40%", md: "20%" }}

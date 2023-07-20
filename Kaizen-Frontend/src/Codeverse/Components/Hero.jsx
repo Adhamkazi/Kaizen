@@ -15,13 +15,15 @@ import WhatIsCodeVerse from './WhatIsCodeVerse';
 // import Carousel from './Crousal';
 import GetStarted from './GetStarted';
 import Footer from './Footer';
-import Navbar from "./Navbar";
+import MainNavbar from "../../Components/Navbar";
+import MainFooter from "../../Components/MainFooter";
 
 const Hero = () => {
 
   return (
     <>
- <Navbar/>
+ {/* <Navbar/> */}
+ <MainNavbar/>
     <Stack  bg="white" direction={{ base: "column", md: "row" }}>
       <Flex p={8} flex={1} align={"center"} justify={"center"}>
         <Stack spacing={1} w={"full"} maxW={"lg"} textAlign={"left"}>
@@ -81,8 +83,8 @@ const Hero = () => {
 {/* <Ranking/> */}
 {/* <Carousel/> */}
 <GetStarted/>
-<Footer/>
-    </>
+{/* <Footer/>. */}
+<MainFooter/>    </>
   );
 };
 

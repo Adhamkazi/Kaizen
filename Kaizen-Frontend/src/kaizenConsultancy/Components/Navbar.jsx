@@ -14,7 +14,7 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink, useLocation } from "react-router-dom";
-
+import logo from ".././../Gifs/KaizenTech-2.png";
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const location = useLocation();
@@ -34,17 +34,21 @@ const Navbar = () => {
     >
       <Flex h={16} alignItems="center" justifyContent="space-between">
         <HStack
+        w={"90%"} 
+        margin={"auto"}
           spacing={8}
           alignItems="center"
-          justifyContent="space-evenly"
-       
+          justifyContent="space-between"
         >
-          {/* <RouterLink to="/"> */}
+           <Box  w={{sm:"30%",md:"20%"}} >
+          <RouterLink to="/">
           <Image
-            w={{ base: "50%", md: "10%" }} 
-            src="https://josephdonbiz.com/wp-content/uploads/2022/09/Kaizen-Logo.png"
+          
+            w={{ base: "70%", md: "100%" }}
+            src={logo}
           />
-          {/* </RouterLink> */}
+          </RouterLink>
+          </Box>
           <HStack as="nav" spacing={4} display={{ base: "none", md: "flex" }}>
             {isHome ? (
               <>
@@ -149,7 +153,7 @@ const Navbar = () => {
             )}
           </HStack>
           <Box>
-            <RouterLink to="/genral-5">
+            <RouterLink to="/contact">
               <Button
                 display={useBreakpointValue({ base: "none", md: "block" })}
                 _hover={{ color: "white", bg: "#3F51B5" }}

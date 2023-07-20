@@ -51,7 +51,7 @@ const HirePage = () => {
               <CheckIcon /> <Text>Payroll & Benefits</Text>
             </Flex>
           </SimpleGrid>
-          <Link to="/genral-5" >
+          <Link to="/contact" >
           <Button
               size="lg"
               mt="20px"
@@ -99,7 +99,7 @@ const HirePage = () => {
             </Flex>
            
           </SimpleGrid>
-          <Link to="/genral-5" >
+          <Link to="/contact" >
           <Button
               size="lg"
               mt="20px"

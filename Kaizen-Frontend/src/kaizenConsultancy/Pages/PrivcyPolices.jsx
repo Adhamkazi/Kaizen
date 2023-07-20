@@ -13,6 +13,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
 import { ArrowUpIcon } from '@chakra-ui/icons'
+import Navbar from "../../Components/Navbar";
 const PrivcyPolices = () => {
   useEffect(() => {
     AOS.init();
@@ -30,6 +31,7 @@ const PrivcyPolices = () => {
   };
   return (
     <div>
+      <Navbar/>
       <Box data-aos="fade-up" w={{ base: "80%", md: "80%" }} margin={"auto"} color={"black"} fontWeight={500}>
         <VStack
           paddingTop={{ base: "100px", md: "40px" }}

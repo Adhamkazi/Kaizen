@@ -14,6 +14,7 @@ import { Link as ScrollLink } from "react-scroll";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
+import logo from "../../Gifs/KaizenTech-2.png"
 export default function Footer() {
   useEffect(() => {
     AOS.init();
@@ -31,10 +32,13 @@ export default function Footer() {
       data-aos="fade-up" 
     >
       <Box  data-aos="fade-up"  w={"80%"}  py={10} margin={"auto"}>
-        <Image
-          w={{ base: "50%", md: "20%" }} color={"gray"}
-          src="https://josephdonbiz.com/wp-content/uploads/2022/09/Kaizen-Logo.png"
-        />
+      <Box w={{ sm: "30%", md: "20%" }}>
+  <Image
+    src={logo}
+    w={{ base: "70%", md: "100%" }}
+    style={{ filter: "brightness(0) saturate(100%) invert(32%) sepia(100%) saturate(1989%) hue-rotate(185deg) brightness(95%) contrast(105%)" }}
+  />
+</Box>
         <SimpleGrid
     columns={{ base: 1, sm: 2, md: 3 }}
     alignItems="center"
@@ -42,19 +46,7 @@ export default function Footer() {
           <Box>
             <Stack align={"flex-start"} mt={"30px"}>
               <Text fontWeight={"bold"} fontSize={"23px"}>
-                Headquarters
-              </Text>
-              <Text fontWeight={"bold"} fontSize={"20px"}>
-                California
-              </Text>
-              <Text textAlign={"left"} fontSize={"18px"}>
-Vallejo Pl, San Ramon, CA 94583, USA
-              </Text>
-            </Stack>
-
-            <Stack align={"flex-start"} mt={"30px"}>
-              <Text fontWeight={"bold"} fontSize={"20px"}>
-                Office 
+                Headquarter
               </Text>
               <Text fontWeight={"bold"} fontSize={"18px"}>
                 Pune
@@ -62,6 +54,20 @@ Vallejo Pl, San Ramon, CA 94583, USA
               <Text textAlign={"left"} fontSize={"18px"} >
               2S2F, Konark Indrayu Premises, l. Plaza, Kondhawa, Pune 411048, Maharashtra, India,
               
+              </Text>
+
+            </Stack>
+
+            <Stack align={"flex-start"} mt={"30px"}>
+              <Text fontWeight={"bold"} fontSize={"20px"}>
+                Office 
+              </Text>
+
+               <Text fontWeight={"bold"} fontSize={"20px"}>
+                California
+              </Text>
+              <Text textAlign={"left"} fontSize={"18px"}>
+Vallejo Pl, San Ramon, CA 94583, USA
               </Text>
             </Stack>
 

@@ -8,6 +8,7 @@ import {
   
   Stack,
   Image,
+  useBreakpointValue,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 // import Hero from './Hero';
@@ -18,8 +19,8 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 // // import Carousel from './Crousal';
 // import GetStarted from './GetStarted';
 // import Footer from './Footer';
-
-
+import { Link as RouterLink } from "react-router-dom";
+import logo from "../../Gifs/KaizenTech-2.png"
 
 const  Navbar = ()=> {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -27,10 +28,16 @@ const  Navbar = ()=> {
   return (
     <>
       <Box bg='white'   >
-        <Flex h={20} alignItems={'center'} justifyContent={'space-between'} boxShadow={"lg"}>
+        <Flex h={24} alignItems={'center'} justifyContent={'space-between'} boxShadow={"lg"}>
         <Flex gap={'10px'} pl={{base:"20px",md:'150px'}} >
-              <Image w={"40%"}  src='https://josephdonbiz.com/wp-content/uploads/2022/09/Kaizen-Logo.png'/>
-              {/* <Image src='https://uploads-ssl.webflow.com/6165b74221c0712ba456e3b6/6165b90e4b166ab7c07d598b_Codeverse%20Text%20Mark.svg' /> */}
+                <Box  w={{sm:"30%",md:"60%"}} >
+          <RouterLink to="/">
+          <Image
+            w={{ base: "70%", md: "100%" }}
+            src={logo}
+          />
+          </RouterLink>
+          </Box>
             </Flex>
           <IconButton
             size={'md'}
@@ -44,14 +51,26 @@ const  Navbar = ()=> {
             <HStack
               as={'nav'}
               spacing={10}
-              display={{ base: 'none', md: 'flex' }} pr="20px" >
+              display={{ base: 'none', md: 'flex' }} pr="80px" >
              <Button fontSize={"17px"} fontFamily={"SF pro text, sans-serif"} variant={"unstyled"} color={"#5225EE"}>How kids Learn</Button>
              <Button  fontSize={"17px"} fontFamily={"SF pro text, sans-serif"} color={"#5225EE"} variant={"unstyled"}>Pricing </Button>
              {/* <Button fontSize={"17px"} fontFamily={"SF pro text ,sans-serif"} color={"#5225EE"} variant={"unstyled"}>Blog</Button> */}
              <Button fontSize={"17px"} fontFamily={"SF pro text ,sans-serif"} color={"#5225EE"} variant={"unstyled"}>FAQ</Button>
             </HStack>
           <Flex pr="150px" alignItems={'center'} display={{base:'none',md:'block'}} >
-          <Button color={'white'} variant={"solid"}  paddingX={"40px"} py='7' rounded={'full'}  bgGradient='linear(to-l,  #6717E7,#B202F7,)'>Book Your Free Class</Button>
+          <RouterLink to="/contact">
+              <Button
+                display={useBreakpointValue({ base: "none", md: "block" })}
+                _hover={{ color: "white", bg: "#3F51B5" }}
+                fontSize="20px"
+                size="lg"
+                rounded="full"
+                bg="#BBDEFB"
+                color="#3F51B5"
+              >
+                Contact us
+              </Button>
+            </RouterLink>
           </Flex>
         </Flex>
 

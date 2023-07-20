@@ -19,6 +19,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ArrowUpIcon } from '@chakra-ui/icons'
 import Navbar from "../Components/Navbar"
+import MainNavbar from "../../Components/Navbar";
 
 const Home = () => {
   useEffect(() => {
@@ -37,9 +38,10 @@ const Home = () => {
   };
   return (
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
+    <MainNavbar/>
     < div  style={{backgroundColor:"white"}} >
-      <Box  data-aos="fade-up"  id="home" w={"90%"} mt={"30px"} mx="auto" >
+      <Box  data-aos="fade-up"  id="home" w={"90%"} pt={"150px"} mx="auto" >
         <SimpleGrid
          fontFamily={"Plus Jakarta Sans"}
           columns={{ base: 1, sm: 1, md: 2 }}
