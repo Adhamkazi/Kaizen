@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/react";
 import { Projects } from "./Projects";
 import { About } from "./About";
-import Service from "./Service";
 
 const Home = () => {
   

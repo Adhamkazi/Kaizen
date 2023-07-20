@@ -4,14 +4,12 @@ import youth from "../Gifs/young-coders-program.jpg"
 import coding from "../Gifs/Coding-Academy.png"
 import web from "../Gifs/Web-Devlopment.jpg"
 import consulting from "../Gifs/Consulting.jpg"
-import Slide from 'react-reveal/Slide';
 import { Link } from 'react-router-dom';
 const CardSlider = () => {
   return (
     <div className="container-fluid contenedor text-center">
       {/* <h1 className="text-center">Services</h1> */}
       <div className="container text-center d-flex flex-wrap justify-content-center">
-        <Slide left >
         <div className="col-lg-4 col-md-6 col-sm-12 container_foto">
           <div className="ver_mas text-center">
             <span className="lnr lnr-eye">
@@ -24,7 +22,6 @@ const CardSlider = () => {
           </article>
           <img src={youth} alt="" />
         </div>
-        </Slide>
         <div className="col-lg-4 col-md-6 col-sm-12 container_foto">
           <div className="ver_mas text-center">
             <span className="lnr lnr-eye">
@@ -50,7 +47,6 @@ const CardSlider = () => {
           </article>
           <img src={web} alt="" />
         </div>
-        <Slide right >
         <div className="col-lg-4 col-md-6 col-sm-12 container_foto">
           <div className="ver_mas text-center">
             <span className="lnr lnr-eye">
@@ -63,7 +59,6 @@ const CardSlider = () => {
           </article>
           <img src={consulting} alt="" />
         </div>
-        </Slide>
       </div>
     </div>
   );

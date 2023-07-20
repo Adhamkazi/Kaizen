@@ -5,12 +5,11 @@
     Stack,
     Text,    
   } from '@chakra-ui/react';
-  import Slide from 'react-reveal/Slide';
+  // import Slide from 'react-reveal/Slide';
   import hero from "../Gifs/hero.jpg"
   export default function SplitScreen() {
     return (
       <Stack  w={"90%"} margin={'auto'} pt={"100px"} direction={{ base: 'column', md: 'row' }}  boxShadow={"sm"} >
-        <Slide left>
         <Flex p={8} flex={1} align={'center'} justify={'center'}  >
           <Stack spacing={6} w={'full'} maxW={'lg'} >  
             <Text fontSize={{ base: 'md', lg: 'lg' }} textAlign={"left"} mt={{base:"0px",md:"50px"}}  color={'gray.500'}>
@@ -18,12 +17,9 @@
             </Text>
           </Stack>
         </Flex>
-        </Slide>
         <Flex flex={1} align={"center"}  >
         <Box textAlign="center"   >
-        <Slide right >
       <Image src={hero} />
-      </Slide>
     </Box>
         </Flex>
       </Stack>
