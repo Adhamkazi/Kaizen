@@ -50,7 +50,7 @@ const CardSlider = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 container_foto">
           <div className="ver_mas text-center">
             <span className="lnr lnr-eye">
-              <Link to="/Kaizen-consulting"><button>View More </button></Link>
+              <Link to="/web-development"><button>View More </button></Link>
             </span>
           </div>
           <article className="text-left">
