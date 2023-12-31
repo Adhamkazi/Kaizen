@@ -70,14 +70,14 @@ const Instructor = () => {
       image: "david-johnson.jpg",
       linkedin: "https://www.linkedin.com/in/davidjohnson",
     },
-    
+   /** 
     {
       name: "Adham Kazi",
       position: "Lead Developer",
       description: "Fusce vel ante vitae dolor interdum finibus at et nunc.",
       image: "david-johnson.jpg",
       linkedin: "https://www.linkedin.com/in/davidjohnson",
-    },
+    },*/
   ];
 
 

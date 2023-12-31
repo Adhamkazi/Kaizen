@@ -40,6 +40,7 @@ const MainNavbar = () => {
         bg={{ base: useColorModeValue("gray.100", "gray.900"), md: "white" }}
         padding={{ base: "5px", md: "2px" }}
         position={{ base: "fixed", md: "fixed" }}
+        w={"100%"}
         zIndex={999}
         px={4}
       >
@@ -69,12 +70,12 @@ const MainNavbar = () => {
                   border={"none"}
                   bg="white"
                   fontFamily={"sans-serif"}
-                  _hover={{
-                    color: "blue",
-                    bg: "white",
-                    textDecoration: "underline",
-                  }}
-                  fontSize="17px"
+                  // _hover={{
+                  //   color: "blue",
+                  //   bg: "white",
+                  //   textDecoration: "underline",
+                  // }}
+                  fontSize="14px"
                   _visited={{ color: "#2196F3" }}
                   fontWeight={600}
                   color="black"
@@ -88,12 +89,12 @@ const MainNavbar = () => {
                    border={"none"}
                     bg="white"
                     fontFamily={"sans-serif"}
-                    _hover={{
-                      color: "blue",
-                      bg: "white",
-                      textDecoration: "underline",
-                    }}
-                    fontSize="17px"
+                    // _hover={{
+                    //   color: "blue",
+                    //   bg: "white",
+                    //   textDecoration: "underline",
+                    // }}
+                    fontSize="14px"
                     _visited={{ color: "#2196F3" }}
                     fontWeight={600}
                     color="black"
@@ -107,12 +108,12 @@ const MainNavbar = () => {
                     bg="white"
                     border={"none"}
                     fontFamily={"sans-serif"}
-                    _hover={{
-                      color: "blue",
-                      bg: "white",
-                      textDecoration: "underline",
-                    }}
-                    fontSize="17px"
+                    // _hover={{
+                    //   color: "blue",
+                    //   bg: "white",
+                    //   textDecoration: "underline",
+                    // }}
+                    fontSize="14px"
                     _visited={{ color: "#2196F3" }}
                     fontWeight={600}
                     color="black"
@@ -126,12 +127,8 @@ const MainNavbar = () => {
                     bg="white"
                     border={"none"}
                     fontFamily={"sans-serif"}
-                    _hover={{
-                      color: "blue",
-                      bg: "white",
-                      textDecoration: "underline",
-                    }}
-                    fontSize="17px"
+                  
+                    fontSize="14px"
                     _visited={{ color: "#2196F3" }}
                     fontWeight={600}
                     color="black"
@@ -141,18 +138,14 @@ const MainNavbar = () => {
                 </Link>
                 <RouterLink to="/contact">
               <Button
-            bg="white"
+            bg="blue"
                     fontFamily={"sans-serif"}
                     border={"none"}
-                    _hover={{
-                      color: "blue",
-                      bg: "white",
-                      textDecoration: "underline",
-                    }}
-                    fontSize="17px"
+                  
+                    fontSize="14px"
                     _visited={{ color: "#2196F3" }}
                     fontWeight={600}
-                    color="black"
+                    color="white"
                   >
                     Contact Us
                   </Button>

@@ -3,7 +3,9 @@ import { motion } from 'framer-motion';
 import excel from '../../Gifs/excel.png';
 import python from '../../Gifs/python.png';
 import powerbi from "../../Gifs/powerbi.png"
+import full from "../../Gifs/full.jpg"
 import 'typeface-nunito';
+import { Link } from 'react-router-dom';
 const Course = () => {
   const courses = [
    
@@ -33,7 +35,7 @@ const Course = () => {
       },
       {
         id: 1,
-        imageSrc: "https://arkasoft-buckets.s3.us-east-2.amazonaws.com/uploads/2021/01/full-stack-development.png",
+        imageSrc: full,
         heading: 'Full stack development',
         description: ' Learn how to build robust web applications from front to back, mastering both client-side and server-side technologies.',
       },
@@ -66,7 +68,7 @@ const Course = () => {
               {course.heading}
             </Heading>
             <Text>{course.description}</Text>
-            <Button  colorScheme="blue">Enroll Now</Button>
+            <Button  colorScheme="blue"><Link to={'/contact'}>Enroll Now</Link></Button>
           </Stack>
         </MotionBox>
       ))}
